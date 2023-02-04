@@ -3,6 +3,6 @@ import Terminal from './App';
 
 test('renders learn react link', () => {
   render(<Terminal />);
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getByText(/A terminal line/i);
   expect(linkElement).toBeInTheDocument();
 });
