@@ -21,7 +21,7 @@ function App() {
         <div>You can write: start or alert , to execute some commands.</div>
       </>
     );
-  }, [pushToHistory]);
+  }, [pushToHistory, setTerminalRef, resetTerminal]);
 
   const commands = useMemo(() => ({
     'start': async () => {
