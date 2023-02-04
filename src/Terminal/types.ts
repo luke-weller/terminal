@@ -6,3 +6,14 @@ export type TerminalPushToHistoryWithDelayProps = {
   content: TerminalHistoryItem;
   delay?: number;
 };
+
+
+export type TerminalCommands = {
+  [command: string]: () => void;
+};
+
+export type TerminalProps = {
+  history: TerminalHistory;
+  promptLabel?: TerminalHistoryItem;
+  commands: TerminalCommands;
+};
