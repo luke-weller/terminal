@@ -9,7 +9,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <h1>lwterm</h1>
     <App />
   </React.StrictMode>
 );

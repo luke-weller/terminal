@@ -15,13 +15,10 @@ function App() {
     resetTerminal();
 
     pushToHistory(<>
-        <div><strong>Welcome!</strong> to the terminal.</div>
-        <div style={{fontSize: 20}}>It contains <span style={{color: 'yellow'}}><strong>HTML</strong></span>. Awesome, right?</div>
-        <br/>
-        <div>You can write: start or alert , to execute some commands.</div>
+        <h1>portfolio terminal</h1>
       </>
     );
-  }, []);
+  }, [pushToHistory, resetTerminal]);
 
   const commands = useMemo(() => ({
     'start': async () => {
@@ -49,7 +46,7 @@ function App() {
       <Terminal
         history={history}
         ref={setTerminalRef}
-        promptLabel={<>Write something awesome:</>}
+        promptLabel={<>lukes-portfolio  % </>}
         commands={commands}
       />
       Happy terminal
