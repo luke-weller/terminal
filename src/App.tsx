@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo} from 'react';
+import {useEffect, useMemo} from 'react';
 import {Terminal} from "./Terminal";
 import {useTerminal} from "./Terminal/hooks/useTerminal";
 
@@ -21,7 +21,7 @@ function App() {
         <div>You can write: start or alert , to execute some commands.</div>
       </>
     );
-  }, [pushToHistory, setTerminalRef, resetTerminal]);
+  }, []);
 
   const commands = useMemo(() => ({
     'start': async () => {
@@ -52,6 +52,7 @@ function App() {
         promptLabel={<>Write something awesome:</>}
         commands={commands}
       />
+      Happy terminal
     </div>
   );
 }
