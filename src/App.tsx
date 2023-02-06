@@ -137,21 +137,45 @@ function App() {
                 </span>
                 <span className="terminal__prompt__input">skills</span>
               </p>
-              These are skills with industry experience:
+              <strong>Programming Languages:</strong>
               <br />
               &nbsp;ReactJS
               <br />
+              &nbsp;Javascript
+              <br />
               &nbsp;ASP.NET
               <br />
-              &nbsp;Azure
+              &nbsp;HTML5
               <br />
-              &nbsp;AWS
+              &nbsp;CSS
               <br />
-              &nbsp;MySQL
+              &nbsp;C#
               <br />
-              &nbsp;Typescript
+              <strong>Cloud Services:</strong>
               <br />
-              &nbsp;----------------------
+              &nbsp;Azure Functions
+              <br />
+              &nbsp;AWS Lambda
+              <br />
+              &nbsp;Azure SQL
+              <br />
+              &nbsp;Azure CosmosDB
+              <br />
+              <strong>User Experience:</strong>
+              <br />
+              &nbsp;Rapid Prototypes
+              <br />
+              &nbsp;Style Guides
+              <br />
+              &nbsp;User Stories
+              <br />
+              &nbsp;User Interviews
+              <br />
+              &nbsp;Personas
+              <br />
+              &nbsp;Wireframing
+              <br />
+              &nbsp;Figma, Invison, Sketch.app
             </div>
           </>
         );
