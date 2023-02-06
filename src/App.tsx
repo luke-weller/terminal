@@ -154,7 +154,7 @@ function App() {
         );
       },
     }),
-    [pushToHistory]
+    [pushToHistory, resetTerminal]
   );
 
   return (
