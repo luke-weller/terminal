@@ -53,7 +53,6 @@ function App() {
               <br />
               &nbsp;contact           |   get in touch with me
               <br />
-              &nbsp;----------------------
             </div>
           </>
         );
