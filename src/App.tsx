@@ -71,7 +71,7 @@ function App() {
         );
       },
       linkedin: async () => {
-        window.open(linkedinUrl, "_blank", "noreferrer");
+        window.open(linkedinUrl, "_blank");
         await pushToHistory(
           <>
             <p>
@@ -136,6 +136,7 @@ function App() {
                 </span>
                 <span className="terminal__prompt__input">skills</span>
               </p>
+              <br />
               <strong>Programming Languages:</strong>
               <br />
               &nbsp;ReactJS
@@ -144,11 +145,12 @@ function App() {
               <br />
               &nbsp;ASP.NET
               <br />
+              &nbsp;C#
+              <br />
               &nbsp;HTML5
               <br />
               &nbsp;CSS
               <br />
-              &nbsp;C#
               <br />
               <strong>Cloud Services:</strong>
               <br />
@@ -159,6 +161,18 @@ function App() {
               &nbsp;Azure SQL
               <br />
               &nbsp;Azure CosmosDB
+              <br />
+              <br />
+              <strong>Development tools:</strong>
+              <br />
+              &nbsp;Git
+              <br />
+              &nbsp;GitHub
+              <br />
+              &nbsp;GitLab
+              <br />
+              &nbsp;Jira
+              <br />
               <br />
               <strong>User Experience:</strong>
               <br />
@@ -175,6 +189,8 @@ function App() {
               &nbsp;Wireframing
               <br />
               &nbsp;Figma, Invison, Sketch.app
+              <br />
+              <br />
             </div>
           </>
         );
