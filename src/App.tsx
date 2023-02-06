@@ -2,7 +2,7 @@ import { useEffect, useMemo } from "react";
 import { Terminal } from "./Terminal";
 import { useTerminal } from "./Terminal/hooks/useTerminal";
 
-const linkedinUrl = 'https://www.linkedin.com/in/wellerluke/';
+const linkedinUrl = "https://www.linkedin.com/in/wellerluke/";
 
 function App() {
   const { history, pushToHistory, setTerminalRef, resetTerminal } =
@@ -20,24 +20,24 @@ function App() {
     );
   }, [pushToHistory, resetTerminal]);
 
-  // prettier-ignore
   const commands = useMemo(
     () => ({
       clear: async () => {
         await resetTerminal();
       },
+      // prettier-ignore
       help: async () => {
         await pushToHistory(
           <>
             <div>
               <p>
                 <span className="terminal__prompt__label">
-                  lukes-portfolio %{" "}
-                </span>{" "}
-                help
+                  lukes-portfolio %
+                </span>
+                <span className="terminal__prompt__input">help</span>
               </p>
               <p>These are common commands used in various situations:</p>
-              &nbsp;help              |   find out what commands you can runn
+              &nbsp;help              |   find out what commands you can run
               <br />
               &nbsp;clear             |   clear the terminal
               <br />
@@ -63,25 +63,28 @@ function App() {
           <>
             <p>
               <span className="terminal__prompt__label">
-                lukes-portfolio %{" "}
-              </span>{" "}
-              experience
+                lukes-portfolio %
+              </span>
+              <span className="terminal__prompt__input">experience</span>
             </p>
             <div>list experience here</div>
           </>
         );
       },
       linkedin: async () => {
-        window.open(linkedinUrl, '_blank', 'noreferrer')
+        window.open(linkedinUrl, "_blank", "noreferrer");
         await pushToHistory(
           <>
             <p>
               <span className="terminal__prompt__label">
-                lukes-portfolio %{" "}
-              </span>{" "}
-              linkedin
+                lukes-portfolio %
+              </span>
+              <span className="terminal__prompt__input">linkedin</span>
             </p>
-            <div>LinkedIn will have opened in a new tab. Otherwise copy this link into your browser: {linkedinUrl}</div>
+            <div>
+              LinkedIn will have opened in a new tab. Otherwise copy this link
+              into your browser: {linkedinUrl}
+            </div>
           </>
         );
       },
@@ -90,9 +93,9 @@ function App() {
           <>
             <p>
               <span className="terminal__prompt__label">
-                lukes-portfolio %{" "}
-              </span>{" "}
-              qualifications
+                lukes-portfolio %
+              </span>
+              <span className="terminal__prompt__input">qualifications</span>
             </p>
             <div>list qualifications here</div>
           </>
@@ -103,9 +106,9 @@ function App() {
           <>
             <p>
               <span className="terminal__prompt__label">
-                lukes-portfolio %{" "}
-              </span>{" "}
-              contact
+                lukes-portfolio %
+              </span>
+              <span className="terminal__prompt__input">contact</span>
             </p>
             <div>list contact here</div>
           </>
@@ -116,9 +119,9 @@ function App() {
           <>
             <p>
               <span className="terminal__prompt__label">
-                lukes-portfolio %{" "}
-              </span>{" "}
-              contact
+                lukes-portfolio %
+              </span>
+              <span className="terminal__prompt__input">interests</span>
             </p>
             <div>list interests here</div>
           </>
@@ -130,9 +133,9 @@ function App() {
             <div>
               <p>
                 <span className="terminal__prompt__label">
-                  lukes-portfolio %{" "}
-                </span>{" "}
-                skills
+                  lukes-portfolio %
+                </span>
+                <span className="terminal__prompt__input">skills</span>
               </p>
               These are skills with industry experience:
               <br />

@@ -43,6 +43,7 @@ p {
     display: flex;
     align-items: center;
     color: white;
+    display: inline;
 }
 
 .terminal__prompt__input input {
