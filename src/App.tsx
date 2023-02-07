@@ -37,21 +37,23 @@ function App() {
                 <span className="terminal__prompt__input">help</span>
               </p>
               <p>These are common commands used in various situations:</p>
-              &nbsp;help              |   find out what commands you can run
+              &nbsp;help            |   get help
               <br />
-              &nbsp;clear             |   clear the terminal
+              &nbsp;clear           |   clear the terminal
               <br />
-              &nbsp;skills            |   see what skills I have
+              &nbsp;skills          |   see what skills I have
               <br />
-              &nbsp;experience        |   explore my experience
+              &nbsp;experience      |   explore my experience
               <br />
-              &nbsp;qualifications    |   checkout my qualifications
+              &nbsp;qualifications  |   see my qualifications
               <br />
-              &nbsp;linkedin          |   open a new tab with my LinkedIn profile
+              &nbsp;linkedin        |   open linkedin
               <br />
-              &nbsp;interests         |   findo out a little more about me personally
+              &nbsp;interests       |   learn about me
               <br />
-              &nbsp;contact           |   get in touch with me
+              &nbsp;contact         |   get in touch with me
+              <br />
+              &nbsp;status          |   Discover employment status
               <br />
             </div>
           </>
@@ -61,9 +63,7 @@ function App() {
         await pushToHistory(
           <>
             <p>
-              <span className="terminal__prompt__label">
-                lukes-portfolio %
-              </span>
+              <span className="terminal__prompt__label">lukes-portfolio %</span>
               <span className="terminal__prompt__input">experience</span>
             </p>
             <div>list experience here</div>
@@ -75,9 +75,7 @@ function App() {
         await pushToHistory(
           <>
             <p>
-              <span className="terminal__prompt__label">
-                lukes-portfolio %
-              </span>
+              <span className="terminal__prompt__label">lukes-portfolio %</span>
               <span className="terminal__prompt__input">linkedin</span>
             </p>
             <div>
@@ -91,9 +89,7 @@ function App() {
         await pushToHistory(
           <>
             <p>
-              <span className="terminal__prompt__label">
-                lukes-portfolio %
-              </span>
+              <span className="terminal__prompt__label">lukes-portfolio %</span>
               <span className="terminal__prompt__input">qualifications</span>
             </p>
             <div>list qualifications here</div>
@@ -104,9 +100,7 @@ function App() {
         await pushToHistory(
           <>
             <p>
-              <span className="terminal__prompt__label">
-                lukes-portfolio %
-              </span>
+              <span className="terminal__prompt__label">lukes-portfolio %</span>
               <span className="terminal__prompt__input">contact</span>
             </p>
             <div>list contact here</div>
@@ -117,12 +111,21 @@ function App() {
         await pushToHistory(
           <>
             <p>
-              <span className="terminal__prompt__label">
-                lukes-portfolio %
-              </span>
+              <span className="terminal__prompt__label">lukes-portfolio %</span>
               <span className="terminal__prompt__input">interests</span>
             </p>
             <div>list interests here</div>
+          </>
+        );
+      },
+      status: async () => {
+        await pushToHistory(
+          <>
+            <p>
+              <span className="terminal__prompt__label">lukes-portfolio %</span>
+              <span className="terminal__prompt__input">status</span>
+            </p>
+            <div>Currently employed full time by Netcompany, UK.</div>
           </>
         );
       },
@@ -135,6 +138,12 @@ function App() {
                   lukes-portfolio %
                 </span>
                 <span className="terminal__prompt__input">skills</span>
+              </p>
+              <p>
+                I have aquired a variety of skills from several roles and have
+                detailed them below. If you are intereted in exploring my
+                experience in more detail please run 'experience' in this
+                terminal.
               </p>
               <br />
               <strong>Programming Languages:</strong>
@@ -156,11 +165,11 @@ function App() {
               <br />
               &nbsp;Azure Functions
               <br />
-              &nbsp;AWS Lambda
-              <br />
               &nbsp;Azure SQL
               <br />
               &nbsp;Azure CosmosDB
+              <br />
+              &nbsp;AWS Lambda
               <br />
               <br />
               <strong>Development tools:</strong>
