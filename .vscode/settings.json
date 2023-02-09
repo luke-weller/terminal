@@ -1,4 +1,8 @@
 {
     "appService.defaultWebAppToDeploy": "/subscriptions/7b8d5d63-b280-449c-9785-4e8b355ed819/appservices/subscriptions/7b8d5d63-b280-449c-9785-4e8b355ed819/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/terminal-portfolio",
-    "appService.deploySubpath": "."
+    "appService.deploySubpath": ".",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ]
 }

@@ -53,7 +53,7 @@ function App() {
               <br />
               &nbsp;contact         |   get in touch with me
               <br />
-              &nbsp;status          |   Discover employment status
+              &nbsp;status          |   discover employment status
               <br />
             </div>
           </>
