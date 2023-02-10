@@ -20,7 +20,7 @@ function App() {
     );
   }, [pushToHistory, resetTerminal]);
 
-  const command = commands();
+  const command = Commands();
 
   return (
     <div className="App">
@@ -33,7 +33,7 @@ function App() {
     </div>
   );
 
-  function commands() {
+  function Commands() {
     return useMemo(
       () => ({
         clear: async () => {
