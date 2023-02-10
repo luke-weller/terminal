@@ -5,21 +5,7 @@ import { useTerminal } from "./Terminal/hooks/useTerminal";
 const linkedinUrl = "https://www.linkedin.com/in/wellerluke/";
 
 function App() {
-  const { history, pushToHistory, setTerminalRef, resetTerminal } =
-    useTerminal();
-
-  useEffect(() => {
-    resetTerminal();
-
-    pushToHistory(
-      <>
-        <h1>portfolio-terminal:luke-weller</h1>
-        Run 'help' to get started
-        <br />
-      </>
-    );
-  }, [pushToHistory, resetTerminal]);
-
+  const { history, setTerminalRef } = useTerminal();
   const command = Commands();
 
   return (
@@ -34,6 +20,19 @@ function App() {
   );
 
   function Commands() {
+    const { pushToHistory, resetTerminal } = useTerminal();
+
+    useEffect(() => {
+      resetTerminal();
+
+      pushToHistory(
+        <>
+          <h1>portfolio-terminal:luke-weller</h1>
+          Run 'help' to get started
+          <br />
+        </>
+      );
+    }, [pushToHistory, resetTerminal]);
     return useMemo(
       () => ({
         clear: async () => {
@@ -77,7 +76,9 @@ function App() {
           await pushToHistory(
             <>
               <p>
-                <span className="terminal__prompt__label">lukes-portfolio %</span>
+                <span className="terminal__prompt__label">
+                  lukes-portfolio %
+                </span>
                 <span className="terminal__prompt__input">experience</span>
               </p>
               <div>list experience here</div>
@@ -89,7 +90,9 @@ function App() {
           await pushToHistory(
             <>
               <p>
-                <span className="terminal__prompt__label">lukes-portfolio %</span>
+                <span className="terminal__prompt__label">
+                  lukes-portfolio %
+                </span>
                 <span className="terminal__prompt__input">linkedin</span>
               </p>
               <div>
@@ -103,7 +106,9 @@ function App() {
           await pushToHistory(
             <>
               <p>
-                <span className="terminal__prompt__label">lukes-portfolio %</span>
+                <span className="terminal__prompt__label">
+                  lukes-portfolio %
+                </span>
                 <span className="terminal__prompt__input">qualifications</span>
               </p>
               <div>list qualifications here</div>
@@ -114,7 +119,9 @@ function App() {
           await pushToHistory(
             <>
               <p>
-                <span className="terminal__prompt__label">lukes-portfolio %</span>
+                <span className="terminal__prompt__label">
+                  lukes-portfolio %
+                </span>
                 <span className="terminal__prompt__input">contact</span>
               </p>
               <div>list contact here</div>
@@ -125,7 +132,9 @@ function App() {
           await pushToHistory(
             <>
               <p>
-                <span className="terminal__prompt__label">lukes-portfolio %</span>
+                <span className="terminal__prompt__label">
+                  lukes-portfolio %
+                </span>
                 <span className="terminal__prompt__input">interests</span>
               </p>
               <div>list interests here</div>
@@ -136,7 +145,9 @@ function App() {
           await pushToHistory(
             <>
               <p>
-                <span className="terminal__prompt__label">lukes-portfolio %</span>
+                <span className="terminal__prompt__label">
+                  lukes-portfolio %
+                </span>
                 <span className="terminal__prompt__input">status</span>
               </p>
               <div>Currently employed full time by Netcompany, UK.</div>
