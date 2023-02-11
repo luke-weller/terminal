@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import Header from "../Header";
 
 const linkedinUrl = "https://www.linkedin.com/in/wellerluke/";
 
@@ -12,6 +13,9 @@ export function useCommands(
     () => ({
       clear: async () => {
         await resetTerminal();
+        await pushToHistory(
+          <Header />
+        );
       },
       // prettier-ignore
       help: async () => {

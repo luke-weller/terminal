@@ -1,8 +1,8 @@
-import { useEffect, useMemo } from "react";
-import { Terminal } from "./Terminal";
-import { useCommands } from "./Terminal/useCommands";
-import { useTerminal } from "./Terminal/hooks/useTerminal";
-
+import { useEffect } from "react";
+import { Terminal } from "./Components/Terminal";
+import { useCommands } from "./Components/Terminal/useCommands";
+import { useTerminal } from "./Components/Terminal/hooks/useTerminal";
+import Header from "./Components/Header";
 
 function App() {
   const { history, pushToHistory, setTerminalRef, resetTerminal } =
@@ -11,13 +11,7 @@ function App() {
   useEffect(() => {
     resetTerminal();
 
-    pushToHistory(
-      <>
-        <h1>portfolio-terminal:luke-weller</h1>
-        Run 'help' to get started
-        <br />
-      </>
-    );
+    pushToHistory(<Header />);
   }, [pushToHistory, resetTerminal]);
 
   const commands = useCommands(resetTerminal, pushToHistory);
